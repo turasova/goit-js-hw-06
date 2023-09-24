@@ -20,15 +20,23 @@
 //     console.log(`Category: ${title} Elements: ${itemsLength}`);
 // });
 
-const categoriesUl = document.querySelector('#categories');
-const items = categoriesUl.querySelectorAll('.item');
+// const categoriesUl = document.querySelector('#categories');
+// const items = categoriesUl.querySelectorAll('.item');
 
-console.log(`Number of categories: ${items.length}`);
+// console.log(`Number of categories: ${items.length}`);
 
-items.forEach((item) => {
-  const title = item.querySelector('h2').innerHTML;
-  const elementsLi = item.querySelectorAll('li').length;
+// items.forEach((item) => {
+//   const title = item.querySelector('h2').innerHTML;
+//   const elementsLi = item.querySelectorAll('li').length;
 
-  console.log(`Category: ${title}
-  Elements: ${elementsLi}`);
-});
+//   console.log(`Category: ${title}
+//   Elements: ${elementsLi}`);
+// });
+const categoriesUl = document.querySelector('#categories').children.length;
+console.log(`Number of categories: ${categoriesUl}`);
+
+const titles = document.querySelectorAll('h2');
+titles.forEach((item) => {
+  console.log('Category:', item.textContent);
+  console.log('Elements:', item.nextElementSibling.children.length);
+})
