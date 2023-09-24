@@ -35,6 +35,7 @@ function handlerForm(event) {
     
   } else {
     alert('Всі поля повинні бути заповнені');
+    return;
   }
 
     console.dir(data)
